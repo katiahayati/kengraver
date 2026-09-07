@@ -2,7 +2,26 @@
 
 A shareable agent skill for turning scanned sheet music into editable MusicXML:
 optical recognition when useful, visual score reading, explicit transcription
-data, and rendered proofreading.
+data, and rendered proofreading. A second, independently installable skill adds
+word-aligned translation notes for learning vocal music.
+
+## Translation notes for singers
+
+[Score Lyric Gloss — installation and user guide](skills/score-lyric-gloss/README.md)
+adds editable meanings in source-word order without changing the music or original
+lyrics. It is a learning aid, not alternate singable lyrics. Use it with an agent,
+or supply your own translations using the Python-only command-line helper.
+The guide includes a runnable two-bar example, appearance controls and checks.
+
+In Codex, ask:
+
+> Use $skill-installer to install skills/score-lyric-gloss from katiahayati/kengraver.
+
+Already have correct MusicXML? This skill works on its own. Starting with a scan
+or incorrect underlay? Use the transcription workflow below first. Both skills'
+original code and instructions are MIT-licensed.
+
+## Score transcription
 
 This is **not a trained model or a one-click OMR service**. The agent reads and
 corrects the music; the bundled tools encode and check it. Results depend on the

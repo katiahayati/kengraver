@@ -1,0 +1,17 @@
+{
+  "part": "P1",
+  "verse": "1",
+  "source_language": "de",
+  "target_language": "en",
+  "appearance": {
+    "color": "#0066CC",
+    "font_size": 9,
+    "font_style": "normal",
+    "placement": "below",
+    "default_y": -75
+  },
+  "units": [
+    {"source": "hallo", "text": "hello"},
+    {"source": "du", "text": "you"}
+  ]
+}

@@ -1,4 +1,29 @@
-# Release validation — 2026-09-06
+# Release validation
+
+## Lyric-gloss addition — 2026-09-07
+
+- 38 public tests passed, including seven portable gloss tests and the unchanged
+  transcription/preserved-reference tests. The development suite passed 112 tests.
+- The standalone gloss skill passed frontmatter validation. Its helper runs with
+  Python's standard library; validation reused a separate local PyYAML install.
+- The original two-bar German example was annotated using the published commands,
+  rendered in MuseScore 4.7.4 and visually inspected: `hello` starts at `hal-` in
+  bar 1, and `you` at `du` in bar 2. Both blue, normal-style glosses survived export
+  at their exact musical anchors. Strict musical round-trip comparison passed.
+- An initial example omitted a MIDI program; MuseScore supplied one, which the
+  strict checker correctly flagged. The final example explicitly declares its
+  playback program. No shared musical checks were weakened.
+- This addition contains the reusable gloss instructions/helper, human guide,
+  synthetic example, MIT license and tests. It does not publish complete working
+  scores or their translations, private operations or workstation configuration.
+  The existing public transcription implementation and fixtures are unchanged.
+
+Testing reused local Linux tools, with a sequential memory-bounded render; no
+cloud instance or translation API was used. The example is a packaging smoke
+test, not a multilingual accuracy benchmark. The guide documents the separate
+translation, text-preservation, musical-consistency and visual-review checks.
+
+## Initial transcription release — 2026-09-06
 
 The clean export was exercised outside the development workspace on Ubuntu
 24.04 / Python 3.12:

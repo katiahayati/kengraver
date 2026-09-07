@@ -1,0 +1,533 @@
+{
+  "format_version": 1,
+  "title": "Luonnotar: rehearsal E, first two measures",
+  "composer": "Jean Sibelius",
+  "source": "luonnotar.pdf — PDF page 7 (printed page 9), system 1, first two measures at E; measure numbers are local to this excerpt",
+  "boundary_notes": [],
+  "parts": [
+    {
+      "id": "P1",
+      "name": "Voice",
+      "staves": 1,
+      "clefs": {
+        "1": [
+          "G",
+          2
+        ]
+      },
+      "key_fifths": 3,
+      "meter": "2/2",
+      "midi_program": 54,
+      "measures": [
+        {
+          "number": "1",
+          "voices": {
+            "1": [
+              {
+                "pitches": [
+                  "F#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "Tu",
+                    "syllabic": "begin",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "C#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "li",
+                    "syllabic": "end",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "F#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "sot",
+                    "syllabic": "begin",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "G#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "ka",
+                    "syllabic": "end",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "number": "2",
+          "voices": {
+            "1": [
+              {
+                "pitches": [
+                  "A4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "suo",
+                    "syllabic": "begin",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "A4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "ra",
+                    "syllabic": "end",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "G#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "lin",
+                    "syllabic": "begin",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              },
+              {
+                "pitches": [
+                  "F#4"
+                ],
+                "duration": "1",
+                "staff": 1,
+                "lyrics": [
+                  {
+                    "text": "tu,",
+                    "syllabic": "end",
+                    "number": "1",
+                    "name": "Finnish",
+                    "language": "fi"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Piano",
+      "staves": 2,
+      "clefs": {
+        "1": [
+          "G",
+          2
+        ],
+        "2": [
+          "F",
+          4
+        ]
+      },
+      "key_fifths": 3,
+      "meter": "2/2",
+      "midi_program": 1,
+      "measures": [
+        {
+          "number": "1",
+          "voices": {
+            "1": [
+              {
+                "pitches": [
+                  "A3",
+                  "C#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#4",
+                  "C#5",
+                  "F#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "C#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up",
+                "clef": [
+                  "G",
+                  2
+                ]
+              },
+              {
+                "pitches": [
+                  "A4",
+                  "C#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "F#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "A4",
+                  "C#5",
+                  "F#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "G#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "C#5",
+                  "F#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "A4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "C#5",
+                  "F#5",
+                  "A5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "F#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "C#5",
+                  "F#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "A4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "C#5",
+                  "F#5",
+                  "A5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "B4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "B5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              }
+            ]
+          }
+        },
+        {
+          "number": "2",
+          "voices": {
+            "1": [
+              {
+                "pitches": [
+                  "B#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "B#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "C#5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "C#6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "D5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up",
+                "accidentals": {
+                  "D5": "natural"
+                }
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "D6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down",
+                "accidentals": {
+                  "D6": "natural"
+                }
+              },
+              {
+                "pitches": [
+                  "C#5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "C#6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "B#4"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "B#5"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "C#5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "F#5",
+                  "A5",
+                  "C#6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "F#5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "begin",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "A5",
+                  "C#6",
+                  "F#6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "continue",
+                "stem": "down"
+              },
+              {
+                "pitches": [
+                  "E5",
+                  "G#5"
+                ],
+                "duration": "1/4",
+                "staff": 2,
+                "beam": "continue",
+                "stem": "up"
+              },
+              {
+                "pitches": [
+                  "B5",
+                  "E6",
+                  "G#6"
+                ],
+                "duration": "1/4",
+                "staff": 1,
+                "beam": "end",
+                "stem": "down",
+                "accidentals": {
+                  "B5": "natural"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

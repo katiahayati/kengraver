@@ -1,0 +1,12 @@
+{
+  "state_version": 1,
+  "score_id": null,
+  "source": {"path": null, "sha256": null, "pages": null},
+  "scope": {"parts": [], "lyric_languages": [], "expressive_markings": "optional", "original_layout": "not_required"},
+  "status": "not_started",
+  "coverage": [],
+  "unresolved": [],
+  "next_actions": [],
+  "artifacts": {},
+  "last_checked": null
+}

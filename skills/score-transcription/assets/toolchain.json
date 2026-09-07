@@ -1,0 +1,10 @@
+{
+  "platform": "Linux x86_64 (tested on Ubuntu 24.04)",
+  "downloads": [
+    {"name": "MuseScore", "version": "4.7.4", "file": "MuseScore-4.7.4.AppImage", "kind": "appimage", "target": "musescore", "probe": "musescore/squashfs-root/AppRun", "url": "https://github.com/musescore/MuseScore/releases/download/v4.7.4/MuseScore-Studio-4.7.4.260706075-x86_64.AppImage", "sha256": "9233ed1b87d3e6b45722278f3c286dcd41e83da778bd0f80a1dd04949696ad93"},
+    {"name": "Audiveris", "version": "5.11.0", "file": "audiveris-5.11.0.deb", "kind": "deb", "target": "audiveris", "probe": "audiveris/opt/audiveris/bin/Audiveris", "url": "https://github.com/Audiveris/audiveris/releases/download/5.11.0/Audiveris-5.11.0-ubuntu24.04-x86_64.deb", "sha256": "f20113aaa33b3149ec8d6a09b2a7963360e65fafd92d69389987a85bbc3ec7a3"},
+    {"name": "Finnish OCR", "file": "fin.traineddata", "kind": "data", "target": "state/config/AudiverisLtd/audiveris/tessdata/fin.traineddata", "probe": "state/config/AudiverisLtd/audiveris/tessdata/fin.traineddata", "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/fin.traineddata", "sha256": "4facea6a34f094af267a002eb12695472c79363b72bac204132b9f6a6df283f1"},
+    {"name": "German OCR", "file": "deu.traineddata", "kind": "data", "target": "state/config/AudiverisLtd/audiveris/tessdata/deu.traineddata", "probe": "state/config/AudiverisLtd/audiveris/tessdata/deu.traineddata", "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/deu.traineddata", "sha256": "896b3b4956503ab9daa10285db330881b2d74b70d889b79262cc534b9ec699a4"},
+    {"name": "English OCR", "file": "eng.traineddata", "kind": "data", "target": "state/config/AudiverisLtd/audiveris/tessdata/eng.traineddata", "probe": "state/config/AudiverisLtd/audiveris/tessdata/eng.traineddata", "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/eng.traineddata", "sha256": "daa0c97d651c19fba3b25e81317cd697e9908c8208090c94c3905381c23fc047"}
+  ]
+}

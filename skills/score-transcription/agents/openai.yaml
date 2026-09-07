@@ -1,0 +1,3 @@
+interface:
+  display_name: "Score Transcription"
+  short_description: "Turn scanned scores into checked editable MusicXML"

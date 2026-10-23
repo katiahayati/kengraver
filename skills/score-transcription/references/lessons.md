@@ -29,6 +29,14 @@ Within-word melismas and word extenders are not interchangeable. MuseScore may
 normalize extender serialization; investigate differences without suppressing
 lyric checks. Read the requested language, not the most convenient printed line.
 
+Bilevel (1-bit) scans can erase lyric diacritics. In one Swedish song, `nånsin`,
+`vållar` and `än` were first read as `nansin`, `vallar` and `an`, while a faint
+ring on a nearby `på` survived, so a missing mark proves nothing. Read lyrics as
+words in context; a parallel line or the published poem settles them. A
+one-syllable word held over several notes is `single` with an extender, not
+`begin` with a hyphen, which would join it to the next word. A word inventory,
+such as the lyric-gloss tool's, catches such joins cheaply.
+
 ## A valid bar can still be wrong
 
 In [this piano source](../assets/cases/late-rhythm-source.png), two dotted quarters

@@ -78,6 +78,29 @@ Luonnotar's dark blue survived import but its user initially mistook it for blac
 Case and possessive endings may need multiword glosses attached to a single word;
 keep such language-specific translations and uncertain poetic readings in job data.
 
+When the input is a native file the user has edited by hand (Var det en dröm,
+2026-10-17: an added pronunciation verse, courtesy accidentals), a MusicXML round
+trip can discard those edits. Edit the native file's own text elements instead,
+use `apply` on the editor's MusicXML export of that same input as the anchor
+reference, and require the edited file's export to pass `check` against it. Also
+diff the native files to show nothing else changed. Users may type a stray
+syllable into the wrong verse; inspect its placement and style before deleting a
+"translation" verse. Large lyric fonts (16 pt bold there) ran together at
+MuseScore's 0.25 sp `lyricsMinDistance`. Raising it to 1 sp in that file's style
+fixed this without timing changes. Some users want bare glosses only, with no
+alternatives or notes in the score; keep explanations in the job notes.
+
+Svarta rosor's first delivery (2026-10-23) kept a second (German) verse, so the
+glosses formed a third line under the staff. The user then asked for it removed,
+as for Var det en dröm, so offer that choice up front. In dense runs at
+MuseScore's default 0.25 sp lyric spacing, the 9 pt glosses were wider than the
+short sung words and stacked three deep into the piano's tuplet brackets and
+notes. A per-job style with `lyricsMinDistance` 1.5 and `minVerticalDistance`
+1.5 put each run on one line.
+If `inventory` reports a broken word connection, check the source before
+regrouping: there it exposed a transcription error, a held word encoded with a
+hyphen.
+
 ## Carry learning forward
 
 Keep the checked mapping, corrected-input hash, output paths, uncertainty and

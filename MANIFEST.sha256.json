@@ -4,7 +4,7 @@
   "LICENSE": "5e7b93751cfccd2d9bd0f4fdeee2871e7708a67f4aa20e274248f7d1a232d343",
   "README.md": "4308db7d5b05b5a6d52136f4301341044657299284a91f0ae353bd325e58177d",
   "THIRD_PARTY_NOTICES.md": "a8a46700e2dc6eb88afd48dd49c7d6d63b0a87c622aaea63197f99141719f570",
-  "VALIDATION.md": "33ac3c80b6c4ed163de2a21bc0b6d3f98b22aac2e6d217943929b8b510ecd7e1",
+  "VALIDATION.md": "1c6030dadec7e94e6f7df8c21aa3f4a4f7e1b225e9a37c01af71e995ce0b37bc",
   "scores/luonnotar/pilot/01-opening.json": "9e5362da3db8ade840824cfd5d4f8ef441ae7bdfaaa96c85e857000ffcb44cbc",
   "scores/luonnotar/pilot/02-vocal-entry.json": "8feac9a65ff8b6ad4d798d5d88272608176bebc4c1212e206c5f0d51eeb7ffe7",
   "scores/luonnotar/pilot/03-dense-piano.json": "b9881e44d8ae10a9355ca4bc0e45efac53a76e1527f472eb5ad149a625736e96",
@@ -40,13 +40,13 @@
   "skills/score-transcription/assets/toolchain.json": "1508ca66d1a196a28caf4788ebc9faba866fcd3b610d632bb717a83c68f62d23",
   "skills/score-transcription/references/lessons.md": "06b7d6b5d7b6558fe9f098f3f6baf0789db13f0d6bb6bf689ae4fb20e3a28964",
   "skills/score-transcription/references/setup.md": "91aa643e0bd012952f75d98c146d6d317094e7f57cc94d314fe2f3ca8e6fe0a2",
-  "skills/score-transcription/references/tools.md": "6ca783681f8a06a509eead43663b4aac4b0ca1fba2b0ade8e1082f949aff8ab3",
+  "skills/score-transcription/references/tools.md": "e45d78caba4b4acc4675bbeb1eab1f14fc75843fddb0b77922d6d04f1bf5beab",
   "skills/score-transcription/scripts/bootstrap.py": "85353099a5eb036b538c55a4011fd2f68771617cc2ee5d657ab9145179926b1a",
-  "skills/score-transcription/scripts/scoretool.py": "59d28403eb9b5fad4a2b6d54b9e89f53e1355f444c933472185e1027f3596228",
+  "skills/score-transcription/scripts/scoretool.py": "c1c909d5c155d04e3e37850e106bce8923b2ce9a9664e87e1cbde0a48178ec71",
   "tests/fixtures/luonnotar/01-opening.musicxml": "e33974662189b9b4c4c0b62125a16eff7a75cb609263c04db74df26cff98d81b",
   "tests/fixtures/luonnotar/02-vocal-entry.musicxml": "79d2e16b29f4f833cea610eec57ecf23c595e583a303f37adb3d83386244681f",
   "tests/fixtures/luonnotar/03-dense-piano.musicxml": "dad77d6f02cbbafe34b1f16258cc507f6dbf61f8bf73ee4b5a1e5f01952e2af2",
   "tests/test_accidental_state.py": "5258be8a25722dd909d75b9e6d2780daf0cc0bc9b322f603c63a703332645100",
   "tests/test_gloss.py": "f50549fa038e8a926b6096012eac94ff263ae8cc27ef5c845b692197f4140e97",
-  "tests/test_scoretool.py": "ec937d4874a078964f734c1a09c16922a6ddb8dd4cf4d0d9be88aa79d25918d2"
+  "tests/test_scoretool.py": "b7a320dd0670be2394b19ba2d903920667a63f05632d68006201364bd1562674"
 }

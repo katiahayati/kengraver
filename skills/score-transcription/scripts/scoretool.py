@@ -570,7 +570,7 @@ def environment(state):
     return env
 
 
-def render(path, output, tools=None):
+def render(path, output, tools=None, mxl=False):
     import pymupdf
     path, output = Path(path).resolve(), Path(output).resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -579,7 +579,7 @@ def render(path, output, tools=None):
     env = environment(output / ".tool-state")
     env.update(QT_QPA_PLATFORM="offscreen", QT_QPA_PLATFORMTHEME="generic", QT_STYLE_OVERRIDE="Fusion", XDG_CURRENT_DESKTOP="NONE", DESKTOP_SESSION="NONE")
     log = []
-    for extension in ("pdf", "mscz", "musicxml"):
+    for extension in ("pdf", "mscz", "musicxml") + (("mxl",) if mxl else ()):
         destination = output / (path.stem + "." + extension)
         require(destination != path, "Render output must not overwrite source MusicXML")
         # Verified workaround for MuseScore 4.7.4's Qt environment and CLI parsing.
@@ -630,7 +630,7 @@ def main():
     p = commands.add_parser("build"); p.add_argument("spec", type=Path); p.add_argument("--out", type=Path, required=True)
     p = commands.add_parser("validate"); p.add_argument("score", type=Path); p.add_argument("--roundtrip", type=Path); p.add_argument("--report", type=Path)
     p = commands.add_parser("compare"); p.add_argument("before", type=Path); p.add_argument("after", type=Path); p.add_argument("--report", type=Path)
-    p = commands.add_parser("render"); p.add_argument("score", type=Path); p.add_argument("--out", type=Path, required=True); p.add_argument("--tools", type=Path)
+    p = commands.add_parser("render"); p.add_argument("score", type=Path); p.add_argument("--out", type=Path, required=True); p.add_argument("--tools", type=Path); p.add_argument("--mxl", action="store_true", help="also export compressed MusicXML (.mxl)")
     p = commands.add_parser("crop"); p.add_argument("pdf", type=Path); p.add_argument("--page", type=int, required=True); p.add_argument("--box", nargs=4, type=float); p.add_argument("--dpi", type=int, default=300); p.add_argument("--out", type=Path, required=True)
     p = commands.add_parser("omr"); p.add_argument("pdf", type=Path); p.add_argument("--out", type=Path, required=True); p.add_argument("--languages", required=True); p.add_argument("--tools", type=Path)
     args = parser.parse_args()
@@ -641,7 +641,9 @@ def main():
     elif args.action == "compare":
         result = compare(args.before, args.after)
     elif args.action == "render":
-        result = {"roundtrip": str(render(args.score, args.out, args.tools))}
+        result = {"roundtrip": str(render(args.score, args.out, args.tools, args.mxl))}
+        if args.mxl:
+            result["mxl"] = str(Path(result["roundtrip"]).with_suffix(".mxl"))
     elif args.action == "crop":
         crop(args.pdf, args.page, args.box, args.out, args.dpi)
         result = {"crop": str(args.out)}

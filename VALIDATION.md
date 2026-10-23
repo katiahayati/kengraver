@@ -1,5 +1,20 @@
 # Release validation
 
+## Render `.mxl` export — 2026-10-23
+
+- `scoretool.py render --mxl` (Python: `render(..., mxl=True)`) adds a compressed
+  MusicXML export from the same MuseScore import as the PDF, `.mscz` and MusicXML.
+  Without the flag the exports, return value and output files are unchanged.
+- 40 public tests passed, including two new render tests that stub the MuseScore
+  launcher and check the export list with and without `--mxl`. The development
+  suite passed 157 tests, and the preserved three-excerpt pilot regression passed.
+- With MuseScore 4.7.4, the public CLI rendered the bundled gloss example with
+  `--mxl`, and `validate --roundtrip` accepted the `.mxl` directly (schema, timing,
+  ties and strict musical comparison).
+- In development use, an `.mxl` exported later from the saved `.mscz` differed from
+  the import-time `.mxl` only in layout hints (coordinates, system spacing, tuplet
+  bracket display); the strict musical comparison passed on both.
+
 ## Lyric-gloss addition — 2026-09-07
 
 - 38 public tests passed, including seven portable gloss tests and the unchanged

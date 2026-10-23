@@ -1,11 +1,14 @@
 """Behavioral tests independent of Luonnotar's key, meter, and instrumentation."""
+import contextlib
 import copy
 from fractions import Fraction
 import json
 from pathlib import Path
 import sys
 import tempfile
+import types
 import unittest
+from unittest import mock
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -264,6 +267,35 @@ class ScoreTests(unittest.TestCase):
         other = self.changed_xml(path, damage)
         with self.assertRaises(ValueError):
             tool.analyze(other)
+
+
+
+class RenderExportTests(unittest.TestCase):
+    def exports(self, **options):
+        commands = []
+
+        def run(command, **kwargs):
+            commands.append(command)
+            Path(command[-1]).write_text('exported')
+            return types.SimpleNamespace(returncode=0, stdout='', stderr='')
+        pages = types.SimpleNamespace(open=lambda path: contextlib.nullcontext([]))
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            app = tmp / 'tools/musescore/squashfs-root/AppRun'
+            app.parent.mkdir(parents=True)
+            app.touch()
+            score = tmp / 'score.musicxml'
+            score.write_text('<score-partwise/>')
+            with mock.patch.object(tool.subprocess, 'run', run), mock.patch.dict(sys.modules, {'pymupdf': pages}):
+                result = tool.render(score, tmp / 'out', tmp / 'tools', **options)
+            return result.relative_to(tmp).as_posix(), [Path(c[-1]).name for c in commands]
+
+    def test_default_exports_are_unchanged(self):
+        self.assertEqual(self.exports(), ('out/score.musicxml', ['score.pdf', 'score.mscz', 'score.musicxml']))
+
+    def test_mxl_adds_one_compressed_export_from_the_same_import(self):
+        self.assertEqual(self.exports(mxl=True),
+                         ('out/score.musicxml', ['score.pdf', 'score.mscz', 'score.musicxml', 'score.mxl']))
 
 
 if __name__ == '__main__':

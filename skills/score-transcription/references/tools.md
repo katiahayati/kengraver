@@ -6,12 +6,13 @@ Resolve `scripts/scoretool.py` relative to the skill directory. Python 3.12 was 
 python3 /path/to/skill/scripts/scoretool.py crop scan.pdf --page 3 --box 0 204 271.2 348 --dpi 300 --out source.png
 python3 /path/to/skill/scripts/scoretool.py build score.json --out score.musicxml
 python3 /path/to/skill/scripts/scoretool.py render score.musicxml --out rendered --tools /path/to/.tools
+python3 /path/to/skill/scripts/scoretool.py render score.musicxml --out rendered --mxl
 python3 /path/to/skill/scripts/scoretool.py validate score.musicxml --roundtrip rendered/score.musicxml --report validation.json
 python3 /path/to/skill/scripts/scoretool.py compare reviewed.musicxml candidate.musicxml --report differences.json
 python3 /path/to/skill/scripts/scoretool.py omr scan.pdf --out raw-omr --languages eng --tools /path/to/.tools
 ```
 
-Crop page numbers are one-based. Crop coordinates are **PDF points**, not pixels (72 points = one inch). The crop command saves a neighboring `.source.json` with provenance. Render writes PDF, native MuseScore, exported MusicXML, and PNG pages. Read the resulting PNGs when proofreading. To create a review, arrange the original crops and corresponding rendered images side by side with links to editable outputs; original pagination is unnecessary.
+Crop page numbers are one-based. Crop coordinates are **PDF points**, not pixels (72 points = one inch). The crop command saves a neighboring `.source.json` with provenance. Render writes PDF, native MuseScore, exported MusicXML, and PNG pages; `--mxl` adds compressed MusicXML (`.mxl`) from the same import, which `validate --roundtrip` and `compare` read directly. A later export of the saved `.mscz` can differ in layout hints (coordinates, system spacing, tuplet bracket display), so compare musical content rather than bytes. Read the resulting PNGs when proofreading. To create a review, arrange the original crops and corresponding rendered images side by side with links to editable outputs; original pagination is unnecessary.
 
 OMR processing accepts PDF or supported image input. Choose installed OCR languages for the printed input, including secondary languages if needed for recognition. Remove unwanted languages only from the final transcription. The command checks for language initialization failures even when Audiveris exits with code 0. For full scores, preserve book context or explicitly recover inherited meter/clefs when working on isolated pages. Avoid concurrent Audiveris runs using the same state directory.
 
